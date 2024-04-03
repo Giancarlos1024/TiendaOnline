@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Tienda Online</title>
+	<link rel="shortcut icon" href="bases/tiendaIcon.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="bases/reset.css">
+	<link rel="stylesheet" type="text/css" href="bases/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bases/navBar.css">
+	<script src="script.js" defer></script>
+</head>
+
+<body>
+	
+<div class="container text-center" id="nombreUsuario">
+	<div class="row">
+		<div class="col-4 nombreUsuario alinear">
+			nombreUsuario
+		</div>
+
+		<div class="col-5">
+		</div>
+
+		<div class="col-1 alinear" id="puntuacion">0</div>
+		<div class="col-2 alinear" id="monedaUsuario">
+			<img src="bases/coinIcon.PNG" id="coinIcon">
+		</div>
+	</div>
+</div>
+
+<!-- parte media-->
+<div class="container">
+	<div class="row" id="imgCentral">
+		<div class="col d-flex justify-content-center align-item-center">
+			<div class="imagenCentral alinear"> 
+				<img src="bases/lilli.jpg" class="imagenCentral">
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- parte media baja.-->
+<div class="container">
+	<div class="row">
+		<div class="col alinear p-5" > <p id="textDialogoPrinc">Hola Soy Lilli, ¡Bienvenido!</p></div>
+	</div>
+</div>
+<!-- parte de abajo-->
+<div class="menu" class="container">
+<div class="row d-flex">
+
+
+	<div class="col">
+		<div class="alinear">
+			<img src="bases/inicioIcon.png" class="iconBar">
+		</div>
+	<div class="alinear textoBoton">INICIO</div>
+	</div>
+	
+
+	<div class="col"> 
+		<div class="alinear">
+			<img src="bases/aprendeIcon.png" class="iconBar">
+		</div>
+	<div class="alinear textoBoton"><a href="2aprende/aprende.html">APRENDE</a></div>
+	</div>
+
+
+	<div class="col">
+		<div class="alinear">
+			<img src="bases/entrenaIcon.png" class="iconBar">
+		</div>
+	<div class="alinear textoBoton"><a href="juego.html">ENTRENA</a></div>
+	</div>
+
+
+	<div class="col">
+		<div class="alinear">
+			<img src="bases/tiendaIcon.png" class="iconBar">
+		</div>
+	<div class="alinear textoBoton"><a href="Articulos/articulos.html">TIENDA</a></div>
+	</div>
+
+
+	<div class="col">
+		<div class="alinear">
+			<img src="bases/pcIcon.png" class="iconBar">
+		</div>
+	<div class="alinear textoBoton"><a href="pc.html">COMPUTADOR</a></div>
+	</div>
+</div>
+
+</div>
+<script>
+	let correctAnswers1 = parseInt(localStorage.getItem('correctAnswers')) || 0;
+
+	// Función para mostrar la puntuación en la interfaz
+	function showScore() {
+		document.getElementById("puntuacion").textContent = correctAnswers1;
+	}
+
+	// Llamar a la función para mostrar la puntuación en la interfaz
+	showScore();
+</script>
+
+
+</body>
+</html>

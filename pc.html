@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><a href="index.html">Home</a></div>
+    <h1>PC Partes</h1>
+    <ul id="purchaseList"></ul>
+
+    <script>
+        // Obtener la información de compra del localStorage
+        let purchaseHistory = JSON.parse(localStorage.getItem('purchaseHistory')) || [];
+
+        // Mostrar la información de compra en la interfaz
+        let purchaseList = document.getElementById('purchaseList');
+        purchaseHistory.forEach(product => {
+            let listItem = document.createElement('li');
+
+            // Crear una imagen y establecer su atributo src
+            let productImage = document.createElement('img');
+            productImage.src = 'img/' + product.image;
+            productImage.style.width = '50px'; // Ajusta el tamaño de la imagen según sea necesario
+            productImage.style.height = '50px';
+            // Agregar la imagen y el nombre del producto a la lista
+            listItem.appendChild(productImage);
+            listItem.appendChild(document.createTextNode(`${product.name} - ${product.price} coins`));
+
+            purchaseList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>

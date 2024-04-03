@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Preguntas y Respuestas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div><a href="index.html">Home</a></div>
+  <div class="container">
+    <h1>Juego de Preguntas y Respuestas</h1>
+    <div id="question"></div>
+    <form id="options" class="options-container"></form>
+    <div id="result" class="result-container"></div>
+    <div id="counter" class="counter-container">Respuestas correctas: <span id="correctAnswers">0</span></div>
+    <div id="answersList" class="answers-list-container"></div>
+    <button id="resetButton" class="btn">Reiniciar Juego</button>
+    <button id="showAnswersButton" class="btn">Ver respuestas</button>
+  </div>
+
+  <!-- Modal para mostrar las respuestas -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Respuestas</h2>
+      <div id="modalAnswersList" class="modal-answers-list-container"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

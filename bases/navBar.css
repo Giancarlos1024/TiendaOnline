@@ -1,0 +1,117 @@
+body{
+	overflow-x: hidden;
+	color: white;
+	background-image: url('fondo004.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: auto;
+}
+
+.col{
+	/*border: 1px solid white;
+	margin: 0px;*/
+	padding: 2px;
+}
+
+/* Parte de abajo*/
+.menu{
+	background-color: #262626;
+	width: 100%;
+	height: 160px;
+	position: fixed;
+	bottom: 0;
+	padding-top: 3em;
+	padding-left: 10px;
+	padding-right: 10px;
+
+}
+.menuItem {
+	margin: 0px;
+	padding: 0px;
+	border-radius: 10%;
+	border: 0px solid #000;
+	width: 85px;
+	height: 40px;
+	color: white;
+	background-color: #00DBDE;
+	background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+}
+.alinear {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.textoBoton{
+	font-size: 14px;
+}
+
+.imagenCentral {
+	background-color: #262626;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	position: relative;
+}
+#imgCentral{
+	padding-top: 60px;
+}
+
+.imagenCentral::after{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	content: ' ';
+	background-color: #00DBDE;
+	background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+ 
+	width: 205px;
+	height: 205px;
+	border-radius: 50%;
+	filter: blur(10px);
+	z-index: -1;
+}
+
+.nombreUsuario{
+	font-size: 35px;
+	font-weight: 700;
+	background-color: #00DBDE;
+	background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+	font-family: system-ui;
+
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+
+	-webkit-text-stroke-width: .5px;
+	-webkit-text-stroke-color: black;
+}
+#monedaUsuario{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #00DBDE;
+	background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+}
+#coinIcon{
+	width: 50px;
+	height: 50px;
+}
+#valorCoin{
+	font-size: 30px;
+	color: white;
+	font-weight: 900;
+}
+.iconBar {
+	width: 60px;
+	height: 60px;
+	border-radius: 10%;
+}
+#textDialogoPrinc{
+	font-size: 30px;
+	margin: 5px;
+	text-shadow: 1px 2px 4px ;
+	font-family: comic sans ms;
+}

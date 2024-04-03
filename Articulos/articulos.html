@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel de Productos</title>
+  <link rel="stylesheet" href="articulos.css">
+  <link rel="stylesheet" type="text/css" href="../bases/reset.css">
+	<link rel="stylesheet" type="text/css" href="../bases/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../bases/navBar.css">
+  
+  
+</head>
+<body>
+  <div><a href="../index.html">Home</a></div>
+  <div class="container text-center" id="nombreUsuario">
+    <div class="row">
+      <div class="col-4 nombreUsuario alinear">
+        nombreUsuario
+      </div>
+  
+      <div class="col-5">
+      </div>
+  
+      <div class="col-1 alinear" id="puntuacion">0</div>
+      <div class="col-2 alinear" id="monedaUsuario">
+        <img src="../bases/coinIcon.PNG" id="coinIcon">
+      </div>
+    </div>
+  </div>
+  <section class="container-general">
+      <div class="carousel-container">
+        <h4>MONITORES</h4>
+        <div id="carousel" class="carousel"></div>
+        <button id="prevBtn" class="control-btn prev-btn">&#10094;</button>
+        <button id="nextBtn" class="control-btn next-btn">&#10095;</button>
+      </div>
+  
+      <div class="carousel-container">
+        <h4>DISCOS DUROS</h4>
+        <div id="carousel-hdd" class="carousel"></div>
+        <button id="prevBtnHDD" class="control-btn prev-btn">&#10094;</button>
+        <button id="nextBtnHDD" class="control-btn next-btn">&#10095;</button>
+      </div>
+      <div class="carousel-container">
+        <h4>Ram</h4>
+        <div id="carousel-ram" class="carousel"></div>
+        <button id="prevBtnRAM" class="control-btn prev-btn">&#10094;</button>
+        <button id="nextBtnRAM" class="control-btn next-btn">&#10095;</button>
+      </div>
+      <div class="carousel-container">
+        <h4>Teclado</h4>
+        <div id="carousel-tcl" class="carousel"></div>
+        <button id="prevBtnTCL" class="control-btn prev-btn">&#10094;</button>
+        <button id="nextBtnTCL" class="control-btn next-btn">&#10095;</button>
+      </div>
+
+  </section>
+  <section class="container-general">
+    <div class="carousel-container">
+      <h4>CPU</h4>
+      <div id="carousel-cpu" class="carousel"></div>
+      <button id="prevBtnCPU" class="control-btn prev-btn">&#10094;</button>
+      <button id="nextBtnCPU" class="control-btn next-btn">&#10095;</button>
+    </div>
+    <div class="carousel-container">
+      <h4>Mouse</h4>
+      <div id="carousel-mou" class="carousel"></div>
+      <button id="prevBtnMOU" class="control-btn prev-btn">&#10094;</button>
+      <button id="nextBtnMOU" class="control-btn next-btn">&#10095;</button>
+    </div>
+    <div class="carousel-container">
+      <h4>Procesador</h4>
+      <div id="carousel-pro" class="carousel"></div>
+      <button id="prevBtnPRO" class="control-btn prev-btn">&#10094;</button>
+      <button id="nextBtnPRO" class="control-btn next-btn">&#10095;</button>
+    </div>
+
+  </section>
+  <script src="index.js"></script>
+  <script>
+    let correctAnswers1 = parseInt(localStorage.getItem('correctAnswers')) || 0;
+  
+    // Función para mostrar la puntuación en la interfaz
+    function showScore() {
+      document.getElementById("puntuacion").textContent = correctAnswers1;
+    }
+  
+    // Llamar a la función para mostrar la puntuación en la interfaz
+    showScore();
+  </script>
+  
+</body>
+</html>
